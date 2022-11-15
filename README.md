@@ -26,7 +26,7 @@ To get a local copy up and running follow these simple example steps. (NPM)
    not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 6. Run the webpack server using this command:
 ``` 
-   npm test
+   npm run build
 ```  
   not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
