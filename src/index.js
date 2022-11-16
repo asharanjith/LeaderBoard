@@ -5,6 +5,7 @@ import displayScores from './modules/api.js';
 
 const refreshButton = document.querySelector('#refresh');
 const form = document.querySelector('.inputPlayer');
+const message = document.querySelector('#message');
 const key = 'Fre06jK3qCMjBipi1fVQ';
 const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${key}/scores/`;
 
@@ -35,5 +36,12 @@ form.addEventListener('submit', (e) => {
     },
   })
     .then((response) => response.json());
-  // .catch((error) => console.log(error));
+  message.innerHTML = 'Score submitted successfully';
+  message.classList.add('success');
+  setTimeout(() => {
+    message.innerHTML = '';
+    message.classList.remove('success');
+  }, 3000);
+  document.querySelector('#playerName').value = '';
+  document.querySelector('#playerScore').value = '';
 });

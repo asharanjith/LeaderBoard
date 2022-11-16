@@ -1,10 +1,15 @@
 const list = document.querySelector('#recent-scores');
 
 const displayScores = (data) => {
-  data.forEach((element) => {
+  list.innerHTML = '';
+  const scores = data.sort((a, b) => b.score - a.score);
+  const scoresList = scores.map((score) => {
     const li = document.createElement('li');
-    li.innerHTML = `${element.user}: ${element.score}`;
-    list.appendChild(li);
+    li.innerHTML = `${score.user}: ${score.score}`;
+    return li;
+  });
+  scoresList.forEach((score) => {
+    list.appendChild(score);
   });
 };
 
