@@ -1,12 +1,20 @@
 body {
   margin: 0%;
+  padding: 0%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f4f4f4;
 }
 
 h1 {
   font-size: 50px;
   font-family: 'Roboto', sans-serif;
   color: rgb(12, 12, 12);
-  padding: 20px;
+
+  /* padding: 20px; */
+  text-align: center;
 }
 
 .container {
@@ -15,8 +23,11 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0%;
-  padding: 0%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* padding: 20px; */
 }
 
 .left-container {
@@ -26,15 +37,20 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  order: 2;
+  padding: 20px;
 }
 
 .right-container {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border: rgb(12, 12, 12) 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 form {
@@ -44,6 +60,8 @@ form {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 input {
@@ -54,6 +72,8 @@ input {
   padding: 5px;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  color: rgb(12, 12, 12);
+  text-align: center;
 }
 
 button {
@@ -66,6 +86,15 @@ button {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 0 10px 0 rgb(12, 12, 12);
+  color: rgb(12, 12, 12);
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(12, 12, 12);
+  color: #f4f4f4;
+  scale: 1.1;
 }
 
 .scoreBoard {
@@ -74,35 +103,66 @@ button {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  border: rgb(12, 12, 12) 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 #recent-scores {
   list-style: none;
   width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10px;
-  border: 3px solid rgb(12, 12, 12);
-  padding: 0;
-  margin: 0;
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid rgb(12, 12, 12);
+  border-radius: 10px;
+  padding: 10px 3px 10px 3px;
+  margin: 10px;
 }
 
 li {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0;
-  border: 0;
+  margin: 0;
 }
 
 li:nth-child(odd) {
-  background-color: rgb(54, 53, 53);
-  color: white;
+  background: #f4f4f4;
+}
+
+li:nth-child(even) {
+  background: rgb(58, 58, 58);
+  color: #f4f4f4;
 }
 
 .success {
   color: green;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
