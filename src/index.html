@@ -14,19 +14,17 @@
                 <button type="button" id="refresh">Refresh</button>
             </div>
             <ul id="recent-scores">
-                <li>Player 1: 100</li>
-                <li>Player 2: 90</li>
-                <li>Player 3: 80</li>
-                <li>Player 4: 70</li>
-                <li>Player 5: 60</li>            
+            </ul>
+
         </div>
         <div class="left-container">
             <h2>Add your score</h2>
             <form class="inputPlayer">
-                <input type="text" placeholder="Name">
-                <input type="number" placeholder="Score">
-                <button type="submit">Submit</button>
+                <input type="text" placeholder="Name" id="playerName" required>
+                <input type="integer" placeholder="Score" id="playerScore" required>
+                <button type="submit" class="submitButton">Submit</button>
             </form>
+            <span id="message"></span>
         </div>
     </div>
 </body>
