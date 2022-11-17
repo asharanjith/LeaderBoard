@@ -4,8 +4,8 @@ import displayScores from './modules/api.js';
 const refreshButton = document.querySelector('#refresh');
 const form = document.querySelector('.inputPlayer');
 const message = document.querySelector('#message');
-const key = 'Fre06jK3qCMjBipi1fVQ';
-// const key = process.env.API_KEY;
+
+const key = process.env.API_KEY;
 const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${key}/scores/`;
 
 refreshButton.addEventListener('click', () => {
