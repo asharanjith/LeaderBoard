@@ -27,6 +27,9 @@ To get a local copy up and running follow these simple example steps. (NPM)
 6. Run the webpack server using this command:
 ``` 
    npm run build
+7. To view the project, run the following command
+   
+   npm start
 ```  
   not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
