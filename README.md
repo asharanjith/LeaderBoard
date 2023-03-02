@@ -10,7 +10,7 @@
 
 
 ## Live Demo
-Will update soon.
+[Click here](https://leaderboard-pgzx.onrender.com/)
 
 
 ## Getting Started
